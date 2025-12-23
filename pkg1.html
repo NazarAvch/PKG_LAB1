@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Конвертер цветов RGB ↔ LAB ↔ CMYK</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Конвертер цветов RGB ↔ LAB ↔ CMYK</h1>
+  <div class="container">
+    <!-- Панель RGB -->
+    <div class="panel">
+      <h2>RGB</h2>
+      <div class="field">
+        <label>R:</label>
+        <input type="number" id="R" min="0" max="255" value="255">
+        <input type="range" id="Rrange" min="0" max="255" value="255">
+      </div>
+      <div class="field">
+        <label>G:</label>
+        <input type="number" id="G" min="0" max="255" value="0">
+        <input type="range" id="Grange" min="0" max="255" value="0">
+      </div>
+      <div class="field">
+        <label>B:</label>
+        <input type="number" id="B" min="0" max="255" value="0">
+        <input type="range" id="Brange" min="0" max="255" value="0">
+      </div>
+      <!-- Палитра -->
+      <div class="field">
+        <label>🎨</label>
+        <input type="color" id="colorPicker" value="#ff0000">
+      </div>
+    </div>
+
+    <!-- Панель LAB -->
+    <div class="panel">
+      <h2>LAB</h2>
+      <div class="field">
+        <label>L:</label>
+        <input type="number" id="L" min="0" max="100" step="0.1">
+        <input type="range" id="Lrange" min="0" max="100" step="0.1">
+      </div>
+      <div class="field">
+        <label>a:</label>
+        <input type="number" id="a" min="-128" max="127" step="0.1">
+        <input type="range" id="arange" min="-128" max="127" step="0.1">
+      </div>
+      <div class="field">
+        <label>b:</label>
+        <input type="number" id="b" min="-128" max="127" step="0.1">
+        <input type="range" id="brange" min="-128" max="127" step="0.1">
+      </div>
+    </div>
+
+    <!-- Панель CMYK -->
+    <div class="panel">
+      <h2>CMYK</h2>
+      <div class="field">
+        <label>C:</label>
+        <input type="number" id="C" min="0" max="100" step="0.1">
+        <input type="range" id="Crange" min="0" max="100" step="0.1">
+      </div>
+      <div class="field">
+        <label>M:</label>
+        <input type="number" id="M" min="0" max="100" step="0.1">
+        <input type="range" id="Mrange" min="0" max="100" step="0.1">
+      </div>
+      <div class="field">
+        <label>Y:</label>
+        <input type="number" id="Y" min="0" max="100" step="0.1">
+        <input type="range" id="Yrange" min="0" max="100" step="0.1">
+      </div>
+      <div class="field">
+        <label>K:</label>
+        <input type="number" id="K" min="0" max="100" step="0.1">
+        <input type="range" id="Krange" min="0" max="100" step="0.1">
+      </div>
+    </div>
+  </div>
+
+  <div class="preview" id="preview"></div>
+  <div class="warning" id="warning"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
